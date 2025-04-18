@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Header() {
   return (
     <header className="hero hero-container">
@@ -10,7 +11,7 @@ function Header() {
           <button className="btn btn-reserve">Reserve a table</button>
         </div>
         <div className="hero-column hero-column-right">
-          <img src="public/restaurant.jpg" alt="Logo" className="hero-image" height="300px"/>
+          <img src="restarant.jpg" alt="Logo" className="hero-image" height="300px"/>
         </div>
     </header>
   );
