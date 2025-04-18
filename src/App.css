@@ -1,6 +1,46 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 100px, 450px, 1900px, 450px;
 }
+
+nav {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav ul li {
+  color: #495E57;
+}
+
+main {
+  background-color: #917272;
+}
+
+header {
+  background-color: #495E57;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  }
+
+footer {
+  background-color: #061127;
+}
+
 
 .App-logo {
   height: 40vmin;
