@@ -1,48 +1,42 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 100px, 450px, 1900px, 450px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 450px 1900px 450px;
   grid-template-areas:
     "nav"
     "header"
     "main"
     "footer";
-  }
+}
 
 nav {
   background-color: #ffffff;
   color: #495E57;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 20px;
-  align-items: center;
-  height: 50px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
 }
 
 nav ul {
   display: flex;
   list-style-type: none;
   gap: 20px;
-  font-family: 'Karla', sans-serif;
-    font-weight: 500;
-    font-size: 12pt;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  padding-left: 300px;
+  padding-right: 300px;
+
 }
 
 nav ul li {
   list-style: none;
-  font-family: 'Karla', sans-serif;
-    font-weight: 500;
-    font-size: 12pt;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #495E57;
-  font-family: 'Karla', sans-serif;
-    font-weight: 500;
-    font-size: 12pt;
 }
 
 main {
@@ -59,6 +53,23 @@ header {
 
 header .hero-column-left {
   text-align: left;
+  margin-left: 290px;
+}
+
+header .hero-column-left button {
+  
+}
+
+header .hero-column-right {
+  text-align: center;
+  margin-right: 290px;
+}
+
+header img {
+  width: 400px;
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 header h1 {

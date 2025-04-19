@@ -1,5 +1,5 @@
 import React from 'react';
-
+import restaurant from '../assets/restaurant.jpg';
 
 function Header() {
   return (
@@ -8,10 +8,10 @@ function Header() {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button className="btn btn-reserve">Reserve a table</button>
+          <button className="btn">Reserve a table</button>
         </div>
         <div className="hero-column hero-column-right">
-          <img src="restarant.jpg" alt="Logo" className="hero-image" height="300px"/>
+          <img src={restaurant} alt="Logo" className="sticker, hero-logo" />
         </div>
     </header>
   );
