@@ -11,7 +11,7 @@ function Header() {
           <button className="btn">Reserve a table</button>
         </div>
         <div className="hero-column hero-column-right">
-          <img src={restaurant} alt="Logo" className="sticker, hero-logo" />
+          <img src={restaurant} alt="Logo" className="sticker" />
         </div>
     </header>
   );

@@ -10,6 +10,8 @@
     "footer";
 }
 
+/* nav */
+
 nav {
   background-color: #ffffff;
   color: #495E57;
@@ -39,9 +41,32 @@ nav ul li a {
   color: #495E57;
 }
 
+/* main */
+
 main {
-  background-color: #917272;
+  background-color: #495E57;
 }
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 700px 550px 650px;
+}
+
+.main .highlights {
+  background-color: #ffffff;
+  height: 700px;
+}
+.main .testimonials {
+  background-color: #495E57;
+  height: 550px;
+}
+.main .about {
+  background-color: #333333;
+  height: 650px;
+}
+
+/* header */
 
 header {
   background-color: #495E57;
@@ -56,9 +81,6 @@ header .hero-column-left {
   margin-left: 290px;
 }
 
-header .hero-column-left button {
-  
-}
 
 header .hero-column-right {
   text-align: center;
@@ -85,6 +107,8 @@ header p {
   color: #ffffff;
   font-family: "Karla", sans-serif;
 }
+
+/* footer */
 
 footer {
   background-color: #061127;
