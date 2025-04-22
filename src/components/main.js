@@ -1,8 +1,8 @@
 import React from 'react';
 import MenuCard from './menucard';
-import lemon from '/assets/lemon dessert.jpg';
-import greekSalad from '/assets/greek salad.jpg';
-import bruschetta from '/assets/bruschetta.jpg';
+import lemon from '../assets/lemondessert.jpg';
+import greekSalad from '../assets/greeksalad.jpg';
+import bruschetta from '../assets/bruchetta.jpeg';
 import food from '../assets/restauranfood.jpg';
 
 
