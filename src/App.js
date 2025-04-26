@@ -3,7 +3,7 @@ import Header from './components/header.js';
 import Nav from './components/nav.js';
 import Main from './components/main.js';
 import Footer from './components/footer.js';
-import React from 'react'
+import React from 'react';
 
 function App() {
   return (

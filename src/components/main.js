@@ -4,7 +4,7 @@ import lemon from '../assets/lemondessert.jpg';
 import greekSalad from '../assets/greeksalad.jpg';
 import bruschetta from '../assets/bruchetta.jpeg';
 import food from '../assets/restauranfood.jpg';
-import basket from '../assets/basket.jpeg';
+import basket from '../assets/Basket.svg';
 
 
 function Main() {
@@ -16,7 +16,7 @@ function Main() {
             <h1>OUR SPECIALS</h1>
             <div className="highlights-header-button">
               <img src={basket} alt="Cart icon" width="48px" height="48px"/>
-            <button className="order-button">Order Online</button>
+              <button className="order-button">Order Online</button>
             </div>
           </div>
           <div className="highlights-container">
