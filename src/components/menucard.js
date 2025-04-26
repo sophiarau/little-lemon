@@ -1,16 +1,23 @@
 import React from "react";
-import dishIcon from "../assets/Dishicon.svg"
 
 function MenuCard({ name, price, description, image }) {
   return (
     <div className="menucard">
-      <div className="card-header">
-        <img src={dishIcon} alt="Dish icon" width="29px" height="20px"/>
-        <h2>{name}</h2>
-      </div>
-      {<img src={image} alt="Greek Salad" width="200px" height="200"/>}
-      <p className="price">${price}</p>
-      <p>{description}</p>
+        <div className="card-header">
+            <h2>{name}</h2>
+        </div>
+        <div className="card-dishimage">
+            <img src={image} alt="Dish" width="200px" height="200" />
+        </div>
+        <div className="card-price">
+            <p className="price">${price}</p>
+        </div>
+        <div className="card-description">
+            <p>{description}</p>
+        </div>
+        <div className="card-button">
+            <button className="order-button">Order Now</button>
+        </div>
     </div>
   );
 }

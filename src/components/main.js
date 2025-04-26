@@ -2,10 +2,9 @@ import React from 'react';
 import MenuCard from './menucard';
 import lemon from '../assets/lemondessert.jpg';
 import greekSalad from '../assets/greeksalad.jpg';
-import bruschetta from '../assets/bruchetta.jpeg';
+import bruschetta from '../assets/bruchetta.svg';
 import food from '../assets/restauranfood.jpg';
 import basket from '../assets/Basket.svg';
-
 
 function Main() {
   return (
@@ -20,10 +19,10 @@ function Main() {
             </div>
           </div>
           <div className="highlights-container">
-            <MenuCard name="dish1" price="12.00" description="this is a description" image={bruschetta} className="menucard card1"/>
-            <MenuCard name="dish2" price="22.00" description="this is a different description" image={lemon} className="menucard card2"/>
-            <MenuCard name="danny" price="priceless" description="this is a great description" image={greekSalad} className="menucard card3"/>
-            <MenuCard name="danny" price="so much money" description="sexiest man alive" image={food} className="menucard card4"/>
+            <MenuCard name="dish1" price="12.00" description="this is a description" image={bruschetta} />
+            <MenuCard name="dish2" price="22.00" description="this is a different description" image={lemon} />
+            <MenuCard name="danny" price="priceless" description="this is a great description" image={greekSalad} />
+            <MenuCard name="danny" price="so much" description="sexiest man alive" image={food} />
           </div>
           </div>
         <div className="testimonials"></div>
