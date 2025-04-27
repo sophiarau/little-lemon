@@ -1,10 +1,10 @@
 import React from 'react';
 import MenuCard from './menucard';
 import Testimonial from './testimonialcard';
-import lemon from '../assets/lemondessert.jpg';
-import greekSalad from '../assets/greeksalad.jpg';
-import bruschetta from '../assets/Bruchettaimg.jpeg';
-import food from '../assets/restauranfood.jpg';
+import lemon from '../assets/pie.jpeg';
+import greekSalad from '../assets/GreekSalad.jpeg';
+import bruschetta from '../assets/Bruschettaimg.jpeg';
+import pizza from '../assets/pizza.jpeg';
 import basket from '../assets/Basket.svg';
 
 function Main() {
@@ -23,7 +23,7 @@ function Main() {
             <MenuCard name="dish1" price="12.00" description="this is a description" image={bruschetta} />
             <MenuCard name="dish2" price="22.00" description="this is a different description" image={lemon} />
             <MenuCard name="danny" price="priceless" description="this is a great description" image={greekSalad} />
-            <MenuCard name="danny" price="so much" description="sexiest man alive" image={food} />
+            <MenuCard name="danny" price="so much" description="sexiest man alive" image={pizza} />
           </div>
         </div>
         <div className="testimonials">
