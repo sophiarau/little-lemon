@@ -1,8 +1,9 @@
 import React from 'react';
 import MenuCard from './menucard';
+import Testimonial from './testimonialcard';
 import lemon from '../assets/lemondessert.jpg';
 import greekSalad from '../assets/greeksalad.jpg';
-import bruschetta from '../assets/bruchetta.svg';
+import bruschetta from '../assets/Bruchettaimg.jpeg';
 import food from '../assets/restauranfood.jpg';
 import basket from '../assets/Basket.svg';
 
@@ -24,8 +25,18 @@ function Main() {
             <MenuCard name="danny" price="priceless" description="this is a great description" image={greekSalad} />
             <MenuCard name="danny" price="so much" description="sexiest man alive" image={food} />
           </div>
+        </div>
+        <div className="testimonials">
+          <div className="testimonials-header">
+            <h1>CUSTOMER TESTIMONIALS</h1>
           </div>
-        <div className="testimonials"></div>
+          <div className="testimonialcards">
+          <Testimonial user="John Doe" text="This is the best restaurant I have ever been to!"/>
+          <Testimonial user="Jane Smith" text="The food was amazing and the service was excellent!"/>
+          <Testimonial user="Alice Johnson" text="I can't wait to come back and try more dishes!"/>
+          <Testimonial user="Bob Brown" text="The atmosphere was perfect for a romantic dinner!"/>
+          </div>
+        </div>
         <div className="about"></div>
       </div>
     </main>
