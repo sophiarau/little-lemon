@@ -6,6 +6,8 @@ import greekSalad from '../assets/GreekSalad.jpeg';
 import bruschetta from '../assets/Bruschettaimg.jpeg';
 import pizza from '../assets/pizza.jpeg';
 import basket from '../assets/Basket.svg';
+import A from '../assets/MandAa.jpg';
+import B from '../assets/MandAb.jpg';
 
 function Main() {
   return (
@@ -22,13 +24,16 @@ function Main() {
           <div className="highlights-container">
             <MenuCard name="dish1" price="12.00" description="this is a description" image={bruschetta} />
             <MenuCard name="dish2" price="22.00" description="this is a different description" image={lemon} />
-            <MenuCard name="danny" price="priceless" description="this is a great description" image={greekSalad} />
-            <MenuCard name="danny" price="so much" description="sexiest man alive" image={pizza} />
+            <MenuCard name="diushh" price="priceless" description="this is a great description" image={greekSalad} />
+            <MenuCard name="dishh" price="so much" description="wowowowowoww" image={pizza} />
           </div>
         </div>
         <div className="testimonials">
           <div className="testimonials-header">
             <h1>CUSTOMER TESTIMONIALS</h1>
+            <div className="testimonials-header-button">
+              <button className="review-button">Leave a Review!</button>
+            </div>
           </div>
           <div className="testimonialcards">
           <Testimonial user="John Doe" text="This is the best restaurant I have ever been to!"/>
@@ -37,7 +42,19 @@ function Main() {
           <Testimonial user="Bob Brown" text="The atmosphere was perfect for a romantic dinner!"/>
           </div>
         </div>
-        <div className="about"></div>
+        <div className="about">
+          <div className="aboutcontainer">
+            <div className="aboutleft">
+              <h1>Little Lemon</h1>
+              <h2>Chicago</h2>
+              <p>Lorem ipsum dolor sit emet, consectetur adipiscing elit, sed do eiusmos tempor incifiduntstlshoreetdoloremegnesliqua. Amet minim mollit non deserunt ullameo est sit aliqua dolor do amet sint. Velit officia consequat duis enim consequel sunt nostrud amel Aret minim mollit non deserunt ullamco est sit aliqua dolor do amet Cindere consorsue crim volit mollit.</p>
+            </div>
+            <div className="aboutright">
+              <img src={A} alt="Mario and Adrian" className="aboutimg" />
+              <img src={B} alt="Mario and Adrian" className="aboutimg" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

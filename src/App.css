@@ -54,8 +54,7 @@ main {
   grid-template-areas:
     "highlights"
     "testimonials"
-    "about";
-}
+    "about";  }
 /* main highlights */
 
 .main .highlights {
@@ -130,7 +129,6 @@ main {
 
 .menucard .card-header {
   display: inline-flex;
-  gap: 10px;
   align-items: center;
   justify-content: center;
 
@@ -193,23 +191,41 @@ main {
 }
 
 
-/* main  testimonials */
+/* main  testimonials
+*/
 
 .main .testimonials {
   background-color: #495E57;
   height: 550px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 115px;
   align-self: center;
   grid-area: testimonials;
 }
 
-.main .testimonials .testimonials-header {
+.main .testimonials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 290px;
+  margin-right: 290px;
+}
+
+.main .testimonials-header h1 {
   font-family: "Karla", bold;
   color: #ffffff;
   text-align: left;
-  margin-left: 290px;
+}
+
+.main .testimonials .testimonials-header button {
+  background-color: #333333;
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  width: 220px;
+  height: 48px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: none;
 }
 
 .main .testimonialcards {
@@ -232,7 +248,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 15px;
 }
 
 .testimonialcard .testimonialrating h1 {
@@ -240,6 +255,8 @@ main {
   font-family: "Karla", bold;
   font-size: 20px;
   text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .testimonialcard .testimonialuser h1 {
@@ -247,19 +264,73 @@ main {
   font-family: "Karla", bold;
   font-size: 20px;
   text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .testimonialcard .testimonialtext p {
   color: #495E57;
   font-family: "Karla", bold;
   text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* main about */
 
 .main .about {
   background-color: #333333;
-  height: 650px;
+  grid-area: about;
+  padding-top: 140px;
+}
+
+.aboutcontainer {
+  display:flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.aboutleft {
+  text-align: left;
+  margin-left: 290px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutright {
+  margin-right: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  max-height: 650px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.aboutimg {
+  width: 250px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.aboutleft h1 {
+  color: #F4CE14;
+  font-family: "Markazi Text", serif;
+}
+
+.aboutleft h2 {
+  color: #ffffff;
+  font-family: "Markazi Text", serif;
+  padding-bottom: 30px;
+}
+
+.aboutleft p {
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
 }
 
 /* header */
