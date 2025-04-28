@@ -1,6 +1,6 @@
 import React from "react";
 
-function Testimonial({ rating, user, text }) {
+function Testimonial({ user, text }) {
   return (
     <div className="testimonialcard">
         <div className="testimonialrating">

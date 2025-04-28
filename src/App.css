@@ -280,7 +280,6 @@ main {
 
 .main .about {
   background-color: #333333;
-  grid-area: about;
   padding-top: 140px;
 }
 
@@ -288,7 +287,6 @@ main {
   display:flex;
   gap: 40px;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .aboutleft {
@@ -308,11 +306,30 @@ main {
   max-height: 650px;
   max-width: 100%;
   flex-wrap: wrap;
+  margin-right: 290px;
 }
 
-.aboutimg {
-  width: 250px;
-  height: auto;
+.image-wrapper {
+  position: relative;
+  height: 400px;
+  width: 400px;
+}
+
+.image-main {
+  height: 200px;
+  width: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.image-overlay {
+  position: absolute; /* Position relative to the parent container */
+  width: auto;       /* Adjust the size of the overlay image */
+  height: 200px;      /* Adjust the height of the overlay image */
+  top: 180px;         /* Move the overlay up (part of it outside) */
+  left: 100px;        /* Move the overlay to the left (part of it outside) */
+  z-index: 1;
   border-radius: 16px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
@@ -390,8 +407,47 @@ header button {
 /* footer */
 
 footer {
-  background-color: #061127;
+  background-color: #ffffff;
+  align-self: center;
+  font-family: "Karla", sans-serif;
+  height: 100%;
 }
+
+.footercontainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  color:#495E57;
+  margin-left: 290px;
+  margin-right: 290px;
+  height: 100%;
+  align-items: start;
+  padding-top: 80px;
+}
+
+.footercontainer .footerlinks {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footerlinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerlinks p{
+  text-align: left;
+}
+
+footer .footerlogo img{
+  width: auto;
+  height: 100px;
+  padding-top: 30px;
+}
+
+
+/* other */
 
 
 .App-logo {
