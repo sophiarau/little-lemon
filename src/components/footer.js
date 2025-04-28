@@ -10,7 +10,7 @@ function Footer() {
         </div>
         <div className="footerlinks footernav">
           <h3 className="footerheader">Navigation</h3>
-          <ul>
+          <ul className="list">
             <li>
               <p>Home</p>
             </li>
@@ -33,7 +33,7 @@ function Footer() {
         </div>
         <div className="footerlinks footercontact">
         <h3 className="footerheader">Contact</h3>
-          <ul>
+          <ul className="list">
             <li>
               <p>Address</p>
             </li>
@@ -47,7 +47,7 @@ function Footer() {
         </div>
         <div className="footerlinks footersocials">
         <h3 className="footerheader">Social Pages</h3>
-          <ul>
+          <ul className="list">
             <li>
               <p>Instagram</p>
             </li>
