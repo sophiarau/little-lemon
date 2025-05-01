@@ -2,7 +2,7 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 450px 1900px 450px;
+  grid-template-rows: 50px 450px 1fr 350px;
   grid-template-areas:
     "nav"
     "header"
@@ -13,23 +13,34 @@
 /* nav */
 
 nav {
-  background-color: #ffffff;
+  background-color: #EDEFEE;
   color: #495E57;
   font-family: 'Karla', sans-serif;
   font-weight: 500;
   font-size: 12pt;
 }
 
+.navigation {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  padding-top: 3px;
+}
+
 nav ul {
   display: flex;
   list-style-type: none;
-  gap: 20px;
   align-items: center;
-  justify-items: center;
   justify-content: space-evenly;
-  padding-left: 300px;
-  padding-right: 300px;
-
+  padding-left: 290px;
+  padding-right: 290px;
+  margin: 0px;
 }
 
 nav ul li {
@@ -58,7 +69,7 @@ main {
 /* main highlights */
 
 .main .highlights {
-  background-color: #ffffff;
+  background-color: #EDEFEE;
   height: 700px;
   padding-top: 115px;
   align-self: center;
@@ -93,7 +104,7 @@ main {
 
 .main .highlights-header button {
   background-color: #333333;
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
   font-size: 20px;
   width: 220px;
@@ -162,7 +173,7 @@ main {
 }
 
 .menucard .card-description {
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
   font-size: 16px;
   text-align: left;
@@ -179,7 +190,7 @@ main {
 
 .menucard .card-button button {
   background-color: #333333;
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
   font-size: 16px;
   width: 110px;
@@ -212,13 +223,13 @@ main {
 
 .main .testimonials-header h1 {
   font-family: "Karla", bold;
-  color: #ffffff;
+  color: #EDEFEE;
   text-align: left;
 }
 
 .main .testimonials .testimonials-header button {
   background-color: #333333;
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
   font-size: 20px;
   width: 220px;
@@ -236,7 +247,7 @@ main {
 }
 
 .testimonialcard {
-  background-color: #ffffff;
+  background-color: #EDEFEE;
   font-family:   "Karla", sans-serif;
   color:  #333333;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
@@ -340,13 +351,13 @@ main {
 }
 
 .aboutleft h2 {
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Markazi Text", serif;
   padding-bottom: 30px;
 }
 
 .aboutleft p {
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
 }
 
@@ -383,18 +394,18 @@ header h1 {
   font-family: "Markazi Text", serif;
 }
 header h2 {
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Markazi Text", serif;
 }
 
 header p {
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
 }
 
 header button {
   background-color: #333333;
-  color: #ffffff;
+  color: #EDEFEE;
   font-family: "Karla", sans-serif;
   font-size: 20px;
   width: 220px;
@@ -407,22 +418,26 @@ header button {
 /* footer */
 
 footer {
-  background-color: #ffffff;
+  background-color: #EDEFEE;
   align-self: center;
-  font-family: "Karla", sans-serif;
+  font-family: "Markazi Text", serif;
   height: 100%;
 }
 
 .footercontainer {
   display: flex;
-  gap: 20px;
+  gap: 100px;
   justify-content: space-evenly;
   color:#495E57;
   margin-left: 290px;
   margin-right: 290px;
-  height: 100%;
+  height: 250px;
   align-items: start;
-  padding-top: 80px;
+  justify-self: center;
+}
+
+.footer .footerheader {
+  font-size: medium;
 }
 
 .footercontainer .footerlinks {
@@ -436,16 +451,75 @@ footer {
   padding: 0;
 }
 
-.footerlinks p{
+.footerlinks p {
   text-align: left;
+  font-size: small;
 }
 
 footer .footerlogo img{
   width: auto;
-  height: 100px;
+  height: 212px;
   padding-top: 30px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* booking page */
+
+.bookingpage {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 75px 1fr 350px;
+}
+
+/* booking header */
+
+
+.bookingheader {
+  background-color: #495E57;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 75px;
+  padding-left: 290px;
+}
+
+.bookingheadertext {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bookingheader h1 {
+  color: #F4CE14;
+  font-family: "Markazi Text", serif;
+  margin: 0;
+}
+.bookingheader h2 {
+  color: #EDEFEE;
+  font-family: "Markazi Text", serif;
+  margin: 0;
+}
+
+.bookingmain {
+  background-color: #EDEFEE;
+}
+
+.bookingform form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
 /* other */
 

@@ -5,17 +5,18 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav>
-        <ul>
-          <li>
-            <img src={logo} alt="Logo" className="logo" height="50px"/>
-          </li>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/menu">Menu</Link></li>
-          <li><Link to="/booking">Reserve a Table</Link></li>
-          <li><Link href="">Order Online</Link></li>
-          <li><Link href="/login">Login</Link></li>
-      </ul>
+        <div className="navigation">
+          <ul>
+            <li>
+              <img src={logo} alt="Logo" className="logo" height="50px"/>
+            </li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/booking">Reserve a Table</Link></li>
+            <li><Link to="">Order Online</Link></li>
+        </ul>
+      </div>
     </nav>
   );
 }

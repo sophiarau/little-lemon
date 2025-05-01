@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuCard from './menucard';
 import Testimonial from './testimonialcard';
+// images
 import lemon from '../assets/pie.jpeg';
 import greekSalad from '../assets/GreekSalad.jpeg';
 import bruschetta from '../assets/Bruschettaimg.jpeg';
