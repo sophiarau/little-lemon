@@ -22,7 +22,7 @@ function ConfirmedBooking() {
         <div className="confirmedcontainer">
           <div className="confirmedheader">
             <h1>🎉 Booking Confirmed!</h1>
-            <p>Thank you for your reservation, {formData?.Name}. We look forward to seeing you, on {formData?.date}, at {formData?.time}!</p>
+            <p>Thank you for your reservation, {formData?.Name}. We look forward to seeing you on {formData?.date}, at {formData?.time}!</p>
           </div>
           <Link to="/">
             <button className="btn">Back to Home</button>
