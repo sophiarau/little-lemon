@@ -3,8 +3,9 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import BookingForm from './components/BookingForm';
-import {initializeTimes} from './components/BookingPage';
+import { initializeTimes } from './components/BookingPage';
 import { updateTimes } from './components/BookingPage';
+import { fetchAPI } from './api'; // Adjust the import path as necessary
 
 test('renders BookingForm heading', () => {
   const mockTimes = ['10:00 AM', '11:00 AM'];
@@ -16,54 +17,43 @@ test('renders BookingForm heading', () => {
   expect(heading).toBeInTheDocument();
 });
 
-test('initializeTimes returns the correct expected value', () => {
-  const expectedTimes = [
-    '10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-    '6:00 PM',
-    '7:00 PM',
-    '8:00 PM',
-    '9:00 PM',
-    '10:00 PM'
-  ];
-  const result = initializeTimes();
-  expect(result).toEqual(expectedTimes);
-})
 
-test('updateTimes returns the correct expected value', () => {
-  const action = { type: 'UPDATE_TIMES' };
-  const expectedTimes = [
-    '10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-    '6:00 PM',
-    '7:00 PM',
-    '8:00 PM',
-    '9:00 PM',
-    '10:00 PM'
-  ];
-  const result = updateTimes([], action);
-  expect(result).toEqual(expectedTimes);
-}
-);
+
+jest.mock('./api', () => ({
+  fetchAPI: jest.fn(),
+}));
+
+test('initializeTimes should return available times from fetchAPI', () => {
+  const mockTimes = ['17:00', '17:30', '18:00'];
+  fetchAPI.mockReturnValue(mockTimes);
+
+  const times = initializeTimes();
+
+  expect(times).toEqual(mockTimes);
+});
+
+test('updateTimes should update state with times from fetchAPI for a given date', () => {
+  const mockDate = new Date('2025-05-09');
+  const mockTimes = ['18:00', '18:30'];
+  fetchAPI.mockReturnValue(mockTimes);
+
+  const initialState = [];
+  const action = { type: 'UPDATE_TIMES', payload: mockDate };
+  const newState = updateTimes(initialState, action);
+
+  expect(fetchAPI).toHaveBeenCalledWith(mockDate);
+  expect(newState).toEqual(mockTimes);
+});
+
+
+
 
   test('Form submission works correctly', () => {
     const availableTimes = ['10:00 AM', '11:00 AM'];
   const dispatch = jest.fn(); // Mock dispatch function
 
     render(<BookingForm availableTimes={availableTimes} dispatch={dispatch} />);
-  
+
     const nameInput = screen.getByPlaceholderText('John Doe');
     const emailInput = screen.getByPlaceholderText('Email');
     const dateInput = screen.getByLabelText('Date:');

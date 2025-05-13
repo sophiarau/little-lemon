@@ -8,7 +8,9 @@ function Nav() {
         <div className="navigation">
           <ul>
             <li>
-              <img src={logo} alt="Logo" className="logo" height="50px"/>
+              <Link to="/">
+                <img src={logo} alt="Logo" className="logo" height="50px"/>
+              </Link>
             </li>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>

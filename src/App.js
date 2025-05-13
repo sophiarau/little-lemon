@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './components/header.js';
 import Nav from './components/nav.js';
-import Main from './components/main.js';
 import Footer from './components/footer.js';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookingPage from './components/BookingPage.js';
+import MainSection from './components/mainsection.js';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
+        <Route path="/booking/ConfirmedBooking" element={<ConfirmedBooking />} />
       </Routes>
     </Router>
   );
@@ -23,7 +25,7 @@ function Home() {
     <div className="home">
       <Nav />
       <Header buttonText="Reserve a Table"/>
-      <Main />
+      <MainSection />
       <Footer />
     </div>
   );

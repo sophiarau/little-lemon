@@ -1,38 +1,58 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchAPI } from "../api";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatchAvailableTimes, submitForm }) {
     const [Name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [occasion, setOccasion] = useState("None");
     const [guests, setGuests] = useState(1);
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const reservation = {
-            Name,
-            email,
-            occasion,
-            guests,
-            date,
-            time
-        };
-        setName("");
-        setEmail("");
-        setOccasion("None");
-        setGuests(1);
-        setDate("");
-        setTime("17:00");
-        console.log(reservation);
-        alert(`Thank you! Reservation made for ${Name} on ${date} at ${time} for ${guests} guests.`);
-    }
+
+    const today = new Date().toISOString().split("T")[0];
+
+    useEffect(() => {
+        if (date) {
+            const times = fetchAPI(new Date(date));
+            dispatchAvailableTimes({ type: 'UPDATE_TIMES', payload: times });
+            console.log("Available times updated for",date, times);
+        }
+    }, [date, dispatchAvailableTimes]);
+
     const handleDateChange = (e) => {
-        const selectedDate = e.target.value;
-        setDate(selectedDate);
-        setTime("");
-        dispatch({ type: 'UPDATE_TIMES', date: selectedDate });
+        const newDate = e.target.value;
+        setDate(newDate);
+    };
+
+    const handleSubmit = (e) => {
+        console.log("Submitting");
+        e.preventDefault();
+
+        const formData = {
+          Name,
+          email,
+          occasion,
+          guests,
+          date,
+          time
+        };
+
+        // Submit the form data using the API
+        const success = submitForm(formData);
+
+        if (success) {
+          console.log("Reservation Info:", formData);
+          // Reset form
+          setName("");
+          setEmail("");
+          setOccasion("None");
+          setGuests(1);
+          setDate("");
+          setTime("");
+        }
       };
+
       return (
         <div className="bookingform">
             <div className="bookingformheader">
@@ -67,6 +87,7 @@ function BookingForm({ availableTimes, dispatch }) {
                     type="date"
                     id="res-date"
                     value={date}
+                    min={today} // Set the minimum date to today
                     onChange={handleDateChange} />
 
                 <label htmlFor="res-time">Time:</label>

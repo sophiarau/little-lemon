@@ -1,52 +1,43 @@
-import React from "react";
-import { useReducer } from "react";
-
+import React, { useReducer } from "react";
+import { useNavigate } from "react-router-dom";
+import { submitAPI } from "../api";
 import BookingForm from "./BookingForm";
 import Nav from "./nav";
 import Footer from "./footer";
 import "../App.css";
 import backdrop from "../assets/backdrop.jpeg";
 
-export const updateTimes = (state, action) => {
-    switch (action.type) {
+const initializeTimes = () => {
+    return [
+      '11:00', '12:00', '13:00', '14:00', '15:00', '16:00','17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',
+    ];
+};
+
+const updateTimes = (state, action) => {
+    switch(action.type) {
       case 'UPDATE_TIMES':
-        return ['10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-    '6:00 PM',
-    '7:00 PM',
-    '8:00 PM',
-    '9:00 PM',
-    '10:00 PM'];
+        return action.payload; // Update state with new available times
       default:
         return state;
     }
-  };
-
-export const initializeTimes = () => {
-    return [
-    '10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-    '6:00 PM',
-    '7:00 PM',
-    '8:00 PM',
-    '9:00 PM',
-    '10:00 PM'];
-  };
+};
 
 function BookingPage() {
-    const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+    const navigate = useNavigate();
+    const [availableTimes, dispatchAvailableTimes] = useReducer(
+        updateTimes,
+        [],
+        initializeTimes
+      );
+
+    const submitForm = (formData) => {
+                if (submitAPI(formData)) {
+            navigate('/booking/ConfirmedBooking');
+            return true;
+        }
+        return false;
+    };
+
     return (
         <div className="bookingpage">
             <Nav />
@@ -64,7 +55,7 @@ function BookingPage() {
                     width: '100%',
                 }}>
                 <div className="bookingformcontainer">
-                    <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+                    <BookingForm availableTimes={availableTimes} dispatchAvailableTimes={dispatchAvailableTimes} submitForm={submitForm} />
                 </div>
             </div>
             <Footer />

@@ -1,5 +1,6 @@
 import React from 'react';
 import footerLogo from '../assets/footlogo.png';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -13,7 +14,9 @@ function Footer() {
             <h3 className="footerheader">Navigation</h3>
             <ul className="list">
               <li>
-                <p>Home</p>
+                <Link to="/">
+                  <p>Home</p>
+                </Link>
               </li>
               <li>
                 <p>About</p>
@@ -22,7 +25,9 @@ function Footer() {
                 <p>Menu</p>
               </li>
               <li>
-                <p>Reservations</p>
+                <Link to="/booking">
+                  <p>Reservations</p>
+                </Link>
               </li>
               <li>
                 <p>Order Online</p>
