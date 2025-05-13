@@ -7,16 +7,16 @@ import Footer from "./footer";
 import "../App.css";
 import backdrop from "../assets/backdrop.jpeg";
 
-const initializeTimes = () => {
+export const initializeTimes = () => {
     return [
       '11:00', '12:00', '13:00', '14:00', '15:00', '16:00','17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',
     ];
 };
 
-const updateTimes = (state, action) => {
+export const updateTimes = (state, action) => {
     switch(action.type) {
       case 'UPDATE_TIMES':
-        return action.payload; // Update state with new available times
+        return action.payload;
       default:
         return state;
     }

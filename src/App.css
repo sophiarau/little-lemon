@@ -571,7 +571,7 @@ footer .footerlogo img{
   margin: 0;
 }
 
-.bookingform form .forminput {
+.forminput {
   width: auto;
   height: 20px;
   border-radius: 16px;

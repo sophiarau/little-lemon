@@ -65,6 +65,7 @@ function BookingForm({ availableTimes, dispatchAvailableTimes, submitForm }) {
                     className="forminput"
                     type="text"
                     id="name"
+                    minLength="2"
                     required
                     placeholder="John Doe"
                     value={Name}
@@ -87,7 +88,7 @@ function BookingForm({ availableTimes, dispatchAvailableTimes, submitForm }) {
                     type="date"
                     id="res-date"
                     value={date}
-                    min={today} // Set the minimum date to today
+                    min={today}
                     onChange={handleDateChange} />
 
                 <label htmlFor="res-time">Time:</label>
